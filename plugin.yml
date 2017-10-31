@@ -1,0 +1,8 @@
+name: MiningDimension
+main: jasonwynn10\MD\MiningDimension
+version: 0.1.0
+api:
+ - 3.0.0
+ - 3.0.0-ALPHA9
+author: jasonwynn10
+description: "A plugin which creates a world specifically for mining with higher ore ratios"
