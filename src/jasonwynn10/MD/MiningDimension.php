@@ -12,6 +12,7 @@ class MiningDimension extends PluginBase implements Listener {
 	private $levelId;
 
 	public function onLoad() {
+		$this->saveDefaultConfig();
 		Generator::addGenerator(MiningWorldGenerator::class, "mining");
 	}
 	public function onEnable() {
@@ -25,5 +26,12 @@ class MiningDimension extends PluginBase implements Listener {
 			}
 		}
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
+	}
+
+	/**
+	 * @return int
+	 */
+	public static function getHeight() : int {
+		return $this->getConfig()->get("world-height", 112);
 	}
 }

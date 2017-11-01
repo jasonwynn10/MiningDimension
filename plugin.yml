@@ -6,3 +6,4 @@ api:
  - 3.0.0-ALPHA9
 author: jasonwynn10
 description: "A plugin which creates a world specifically for mining with higher ore ratios"
+load: POSTWORLD

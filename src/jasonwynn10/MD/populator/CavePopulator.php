@@ -17,7 +17,7 @@
 
 namespace jasonwynn10\MD\populator;
 
-use Ad5001\BetterGen\utils\BuildingUtils;
+use jasonwynn10\MD\utils\BuildingUtils;
 use pocketmine\block\Block;
 use pocketmine\level\ChunkManager;
 use pocketmine\level\Level;
