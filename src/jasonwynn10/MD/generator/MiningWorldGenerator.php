@@ -85,7 +85,7 @@ class MiningWorldGenerator extends Generator {
 			new OreType(Block::get(Block::COAL_ORE), 20, 16, 0, 128),
 			new OreType(Block::get(Block::IRON_ORE), 20, 8, 0, 64),
 			new OreType(Block::get(Block::REDSTONE_ORE), 8, 7, 0, 16),
-			new OreType(Block::get(Block::LAPIS_ORE), 1, 6, 0, 32),
+			new OreType(Block::get(Block::LAPIS_ORE), 2, 6, 0, 32),
 			new OreType(Block::get(Block::GOLD_ORE), 2, 8, 0, 32),
 			new OreType(Block::get(Block::DIAMOND_ORE), 2, 7, 0, 16),
 			new OreType(Block::get(Block::DIRT), 20, 32, 0, 128),
