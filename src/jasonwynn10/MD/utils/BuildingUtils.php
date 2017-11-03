@@ -18,6 +18,7 @@
 namespace jasonwynn10\MD\utils;
 
 
+use jasonwynn10\MD\MiningDimension;
 use pocketmine\block\Block;
 use pocketmine\level\ChunkManager;
 use pocketmine\math\Vector3;
@@ -219,5 +220,25 @@ class BuildingUtils {
 			$v1,
 			$v2
 		];
+	}
+
+	/**
+	 * @return int
+	 */
+	public static function getHeight() : int {
+		return MiningDimension::getInstance()->getConfig()->get("surface-height", 80);
+	}
+
+	/**
+	 * @return int
+	 */
+	public static function getSurfaceBlock() : int {
+		$string = MiningDimension::getInstance()->getConfig()->get("surface-block-type", Block::GRASS);
+		if(is_numeric($string)) {
+			return (int) $string;
+		}elseif(defined(Block::class."::".strtoupper(trim($string)))) {
+			return (int) constant(Block::class."::".strtoupper(trim($string)));
+		}
+		return Block::GRASS;
 	}
 }
